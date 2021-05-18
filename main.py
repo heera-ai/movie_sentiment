@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from sklearn.externals import joblib
+import joblib
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
