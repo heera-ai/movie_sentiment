@@ -21,9 +21,14 @@ def predict_on_ip(usr_ip):
 	result = {1:"Positive",0:"Negative"}
 	return result[model.predict(review_vec)[0]]
 
+with open("trained_model.pkl") as fin:
+    model = pickle.load(fin)
 
-model = pickle.load(open("trained_model.pkl","rb"))
-count_vect = pickle.load(open("vectors.pkl","rb"))
+with open("vectors.pkl") as fim:
+    count_vect = pickle.load(fim)
+
+# model = pickle.load(open(,"rb"))
+# count_vect = pickle.load(open("","rb"))
 
 nav= st.sidebar.radio("Navigations",["Home","Data","Model","Code","Contact Us"],index=0)
 
