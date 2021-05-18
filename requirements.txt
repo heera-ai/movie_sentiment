@@ -1,3 +1,4 @@
 nltk
+sklearn
 Pillow==8.0.1
 streamlit==0.82.0
