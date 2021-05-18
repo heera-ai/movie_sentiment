@@ -2,7 +2,8 @@ import streamlit as st
 from PIL import Image
 import pickle
 import nltk
-nltk.download()
+nltk.download(corpus)
+nltk.download(tokenize)
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 stop_words = set(stopwords.words('english'))
