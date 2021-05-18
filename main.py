@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-import joblib
+import pickle
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -20,8 +20,8 @@ def predict_on_ip(usr_ip):
 	return result[model.predict(review_vec)[0]]
 
 
-model = joblib.load("trained_model.pkl")
-count_vect = joblib.load("vectors.pkl")
+model = pickle.load(open("trained_model.pkl","rb"))
+count_vect = pickle.load(open("vectors.pkl","rb"))
 
 nav= st.sidebar.radio("Navigations",["Home","Data","Model","Code","Contact Us"],index=0)
 
