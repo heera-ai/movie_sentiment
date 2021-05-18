@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 import pickle
+import joblib
 import nltk
 nltk.download('stopwords')
 nltk.download('punkt')
@@ -21,11 +22,13 @@ def predict_on_ip(usr_ip):
 	result = {1:"Positive",0:"Negative"}
 	return result[model.predict(review_vec)[0]]
 
-with open("trained_model.pkl") as fin:
-    model = pickle.load(fin)
+# with open("trained_model.pkl") as fin:
+#     model = pickle.load(fin)
 
-with open("vectors.pkl") as fim:
-    count_vect = pickle.load(fim)
+# with open("vectors.pkl") as fim:
+#     count_vect = pickle.load(fim)
+model = joblib.load("trained_model.pkl")
+count_vect = joblib.load("vectors.pkl")
 
 # model = pickle.load(open(,"rb"))
 # count_vect = pickle.load(open("","rb"))
