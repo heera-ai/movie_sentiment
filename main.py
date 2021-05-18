@@ -3,7 +3,7 @@ from PIL import Image
 import pickle
 import nltk
 nltk.download('stopwords')
-nltk.download('word_tokenize')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 stop_words = set(stopwords.words('english'))
