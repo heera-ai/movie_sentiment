@@ -1,8 +1,5 @@
-scipy==0.15.1
-scikit-learn
 nltk==3.6.2
 Pillow==8.0.1
 streamlit==0.82.0
 joblib==0.13.0
-
 requests==0.11.1
